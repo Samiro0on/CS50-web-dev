@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My web Page !</title>
+	<!-- <link rel="stylesheet" href="www.bootstrap.com put it here"> -->
+	<!-- <link rel="stylesheet" href="var.scss"> -->
+	<style>
+		/*try to use "ol li" directly*/
+		ol > li{
+			color: red;
+		}
+		input[type=text]{
+			background-color: yellow; 
+		}
+		input[type=number]{
+			background-color: lightblue;
+		}
+		input[type=password]{
+			background-color: red;
+		}
+
+		button{
+			width: 100px;
+			height: 30px;
+			background-color: green;
+			font-size: 23px;
+		}
+		button:hover{
+			background-color: orange;
+			font-size: 10px;
+		}
+
+		a::before{
+			content: "\21d2 Click here: ";
+			font-weight: bold;
+		}
+
+		p::selection{
+			background-color: yellow;
+			color: red;
+		}
+
+		@media print{
+			.screen-only{
+				display: none;
+			}
+		}
+
+		h2{
+			text-align: center;
+		}
+
+		@media (min-width: 900px){
+			body{
+				background-color: yellow;
+			}
+		}
+
+		@media (max-width: 899px){
+			body{
+				background-color: red;
+			}
+		}
+
+		@media (min-width: 1000px){
+			h2::after {
+					content: " Thank you .....";
+			}
+		}
+
+		@media (max-width: 800px){
+			p{
+				display: none;
+			}
+		}
+
+		.container{
+			display: flex;
+			flex-wrap: wrap;
+		}
+		.container > div{
+			background-color: lightgreen;
+			padding: 19px;
+			margin: 13px;
+			font-size: 16px;
+			width: 223px;
+		}
+
+		.grid{
+			display: grid;
+			background-color: green;
+			padding: 23px;
+			grid-row-gap: 13px;
+			grid-column-gap: 17px;
+			grid-template-columns: 123px auto auto;
+			/*grid-template-columns: auto auto auto;*/
+			/*grid-template-columns: 123px 200px auto;*/
+
+		}
+		.grid-item{
+			background-color: orange;
+			font-size: 20px;
+		}
+
+		.row > div{
+			padding: 20px;
+			background-color: orange;
+			border: 3px solid black;
+		}
+		.row2 > div{
+			background-color: purple;
+			border: 3px dotted brown;
+			font-weight: bold;
+		}
+
+
+	</style>
+
+</head>
+
+<body>
+	Hello People !
+
+	<form id="x1">
+
+		<div>
+			<input type="text" name="myName" placeholder="your name">
+			<input type="password" name="yrPassword" placeholder="Password">
+			<button>Confirm</button>	
+		</div>
+		<div>
+			Favorite color :
+			<input type="radio" name="color" value="red">Red
+			<input type="radio" name="color" value="green">Green
+			<input type="radio" name="color" value="blue">Blue
+			<input type="radio" name="color" value="other">Other
+		</div>
+		<div>
+			<input name="country" list="countries" placeholder="Country:...">
+			<datalist id="countries">
+				<option value="Egypt">
+				<option value="Angola">
+				<option value="Tunis">
+				<option value="Togo">
+				<option value="Kenia">
+				<option value="Moroccow">
+				<option value="Mali">
+				<option value="South Africa">
+				<option value="England">
+				<option value="Ethupia">
+				<option value="America">
+				<option value="Tanzania">
+				<option value="Kongo">
+				<option value="Marc">
+				<option value="Greece">
+				<option value="Spain">
+				<option value="Italy">
+				<option value="Romania">
+				<option value="India">
+				<option value="Russia">
+				<option value="France">
+			</datalist>
+			<button>Next</button>
+		</div>
+		
+	</form>
+
+	<ol>
+		<li>first item</li>
+		<li>second item</li>
+		<ul>
+			<li>first sub item</li>
+			<li>second sub item</li>
+		</ul>
+		<li>third item</li>
+		<ul><li>third sub item</li></ul>
+	</ol>
+	<ul>
+		<li>random one</li>
+		<li>another random one</li>
+	</ul>
+
+	<form>
+		<div>
+			<input type="text" name="xx1" placeholder="your name ...">
+			<input type="text" name="xx2" placeholder="your major ...">
+			<input type="number" name="xx3" placeholder="your age ...">
+			<button>Next</button>
+		</div>
+	</form>
+
+	<ul>
+		<li><a href="#">one link</a></li>
+		<li><a href="#">another link</a></li>
+		<li><a href="#">last link</a></li>
+	</ul>
+
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+	<p class="screen-only">this is the last paragraph not gonna appear if i tried to print it click right then print to try ;)	</p>
+
+	<div class="container">
+
+		<div>A. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+		<div>B. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+		<div>C. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+		<div>D. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+		<div>E. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+		<div>F. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+		<div>G. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+		<div>K. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+		<div>L. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+		<div>M. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+		<div>X. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+		<div>Y. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+		<div>Z. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+	
+	</div>
+
+	<div class="grid">
+
+		<div class="grid-item">1</div>
+		<div class="grid-item">2</div>
+		<div class="grid-item">3</div>
+		<div class="grid-item">4</div>
+		<div class="grid-item">5</div>
+		<div class="grid-item">6</div>
+		<div class="grid-item">7</div>
+		<div class="grid-item">8</div>
+		<div class="grid-item">9</div>
+		<div class="grid-item">10</div>
+		<div class="grid-item">11</div>
+		<div class="grid-item">12</div>
+
+	</div>
+
+	<div class="var1">
+
+		<div class="row">
+			<div class="col-3">this is first section</div>
+			<div class="col-3">this is secont section</div>
+			<div class="col-3">this is the last section</div>
+			<div class="col-3">thank you...!</div>
+		</div>
+		
+
+	</div>
+
+	<div class="var2">
+
+		<div class="row2">
+			<div class="col-lg-3 col-sm-6">this is first section</div>
+			<div class="col-lg-3 col-sm-6">this is secont section</div>
+			<div class="col-lg-3 col-sm-6">this is the last section</div>
+			<div class="col-lg-3 col-sm-6">thank you...!</div>
+		</div>
+		
+
+	</div>
+
+	<div class="var3">
+
+		<div class="alert alert-primary" role="alert">
+			you have got new notification ...
+		</div>
+		
+		<div class="alert alert-success" role="alert">
+			you have good news ...
+		</div>
+		
+		<div class="alert alert-danger" role="alert">
+			you have got bad news ...
+		</div>
+
+	</div>
+
+	<h2>This is the end of my web page !</h2>
+
+</body>
+</html>
