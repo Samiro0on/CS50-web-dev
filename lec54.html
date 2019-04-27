@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<script type="text/javascript">
+		document.addEventListener('DOMContentLoaded', () =>{
+			
+			document.querySelector('#submit').disabled = true;
+			document.querySelector('#task').onkeyup = () =>{
+				document.querySelector('#submit').disabled = false;
+			};
+			
+			document.querySelector('#new-task').onsubmit = () =>{
+				const li = document.createElement('li');
+				li.innerHTML = document.querySelector('#task').value;
+				document.querySelector('#tasks').append(li);
+				document.querySelector('#task').value = '';
+				document.querySelector('#submit').disabled = true;	
+				return false;
+			};
+		});
+	</script>
+
+	<script type="text/javascript">
+		if (!localStorage.getItem('counter'))
+			localStorage.setItem('counter',0);
+
+			document.addEventListener('DOMContentLoaded', () =>{
+				setInterval(count, 1000);
+				let counter = 0;
+				function count(){
+					counter ++;
+					document.querySelector('#counter').innerHTML = counter;
+				};
+				document.querySelector('#counter').innerHTML = localStorage.getItem('counter');
+				
+				document.querySelector('button').onclick () =>{
+					let counter = localStorage.getItem('counter');
+					counter ++;
+
+					document.querySelector('#counter').innerHTML = counter;
+					localStorage.setItem('counter', counter);
+				}
+
+			});
+	</script>
+
+	<title>My web page</title>
+</head>
+<body>
+	<div>
+			<h1>Tasks: </h1>
+			<ul id="tasks">
+				
+			</ul>
+			<form id="new-task">
+				<input id="task" autocomplete="off" autofocus="on" placeholder="enter a new task" type="text">
+				<input id="submit" type="submit">
+			</form>
+		</div>
+
+		<h1 id="counter">0</h1>
+		<button id="button">click here</button>
+</body>
+
+</html>
