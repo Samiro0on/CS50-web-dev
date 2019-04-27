@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<script type="text/javascript">
+		document.addEventListener('DOMContentLoaded', function(){
+
+			document.querySelector('#red').onclick = function(){
+				document.querySelector('#hello').style.color = 'red';
+			};
+
+			document.querySelector('#yellow').onclick = function(){
+				document.querySelector('#hello').style.color = 'yellow';
+			};
+			
+			document.querySelector('#green').onclick = function(){
+				document.querySelector('#hello').style.color = 'green';
+				return false;
+			};
+		});
+
+	</script>
+
+	<script type="text/javascript">
+		document.addEventListener('DOMContentLoaded', () =>{
+			document.querySelector('#color-change').onchange = function(){
+				document.querySelector('#bye').style.color = this.value;
+				return false;
+			};
+		});
+
+	</script>
+
+	<script type="text/javascript">
+		document.addEventListener('DOMContentLoaded', () =>{
+			document.querySelector('#new-task').onsubmit = () =>{
+				const li = document.createElement('li');
+				li.innerHTML = document.querySelector('#task').value;
+				document.querySelector('#tasks').append(li);
+				document.querySelector('task').value = '';
+				return false;
+			};
+		});
+	</script>
+
+	<title>my web page</title>
+
+</head>
+
+<body>
+
+	
+		<h1 id="hello">my name is samir</h1>
+		<button id="red">Red</button>
+		<button id="yellow">Yellow</button>
+		<button id="green">Green</button>
+	
+
+		<div>
+			<h2 id="bye">say hi to everyone</h2>
+			<select id="color-change">
+				<option value="black">Black</option>
+				<option value="red">Red</option>
+				<option value="yellow">Yellow</option>
+				<option value="green">Green</option>
+			</select>
+		</div>
+	
+		<div>
+			<h1>Tasks: </h1>
+			<ul id="tasks">
+		
+			</ul>
+			<form id="new-task">
+				<input id="task" autocomplete="off" autofocus="on" placeholder="enter a new task" type="text">
+				<input type="submit">
+			</form>
+		</div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript">
+		document.addEventListener('DOMContentLoaded', function(){
+			
+			document.querySelector('#myForm').onsubmit = function(){
+				const name = document.querySelector('#myName').value;
+
+				alert(`Hello ${name}!`); 
+			};
+
+		});
+	</script>
+	
+	<title>My web page</title>
+
+</head>
+<body>
+
+
+	<form id="myForm">
+		<input id="myName" type="text" autocomplete="off" autofocus="on" placeholder="your name please">
+		<input type="submit">
+	</form>
+
+	
+</body>
+</html>  

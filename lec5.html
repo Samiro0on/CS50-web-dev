@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<script type="text/javascript">
+		
+
+		function Hello(){
+			alert("hello, Sir ... ");
+		}
+
+		function Bye(){
+			document.querySelector("h1").innerHTML = "Goodbye !!";			
+		}
+
+		let counter = 0
+		function Count(){
+			counter++;
+			document.querySelector('#counter').innerHTML = counter;
+			if (counter%10 == 0) {
+				alert(`counter is at ${counter} !`);
+			}
+		}
+
+	</script>
+
+	<title>My web page</title>
+</head>
+<body>
+
+	<h1>Welcome !</h1>
+	<button onclick="Hello()" onmouseover="Bye()">click here</button>
+	<h2>Thank you.</h2>
+
+	<div>
+		
+		<h3 id="counter">0</h3>
+		<button onclick="Count()">Click here</button>
+
+	</div>
+
+	<div>
+		
+		<h3 id="hamada">0</h3>
+		<button>Click here Again</button>
+
+	</div>
+
+
+</body>
+</html>
